@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://user:pass@customer-webtools-api.internode.on.net/api/v1.5/1/service
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.2.2 (2015-04-13))
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 07 Aug 2015 11:49:22 GMT
+      Authorization:
+      - Basic dXNlcjpwYXNz
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Aug 2015 11:49:22 GMT
+      Server:
+      - Apache
+      Pragma:
+      - no-cache, no-cache, no-cache
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <internode><api><service type="Personal_ADSL" request="service"><id>1</id><username>example@internode.on.net</username><quota units="bytes">100000000000</quota><plan>Easy Naked 100 Special</plan><carrier>Internode</carrier><speed>24 Mbits/sec</speed><usage-rating>up+down</usage-rating><rollover>2015-01-01</rollover><excess-charged>no</excess-charged><excess-shaped>yes</excess-shaped><excess-restrict-access>no</excess-restrict-access><plan-interval>Monthly</plan-interval><plan-cost units="aud">99.99</plan-cost></service></api></internode>
+    http_version: 
+  recorded_at: Fri, 07 Aug 2015 11:49:22 GMT
+recorded_with: VCR 2.9.3

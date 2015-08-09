@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://user:pass@customer-webtools-api.internode.on.net/api/v1.5
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.2.2 (2015-04-13))
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 07 Aug 2015 11:49:22 GMT
+      Authorization:
+      - Basic dXNlcjpwYXNz
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Aug 2015 11:49:22 GMT
+      Server:
+      - Apache
+      Pragma:
+      - no-cache, no-cache, no-cache
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <internode><api><services count="1"><service type="Personal_ADSL" href="/api/v1.5/1">5613302</service></services></api></internode>
+    http_version: 
+  recorded_at: Fri, 07 Aug 2015 11:49:22 GMT
+recorded_with: VCR 2.9.3
