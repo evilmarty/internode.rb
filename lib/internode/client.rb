@@ -8,8 +8,8 @@ module Internode
     class ServerError < RuntimeError; end
 
     def initialize(options = {})
-      username = options.fetch(:username){ ENV["INTERNODE_USERNAME"] }
-      password = options.fetch(:password){ ENV["INTERNODE_PASSWORD"] }
+      username = options[:username] || ENV["INTERNODE_USERNAME"]
+      password = options[:password] || ENV["INTERNODE_PASSWORD"]
       @url = options.fetch(:url){ URL }
       @client = HTTPClient.new
       @client.set_auth(@url, username, password)

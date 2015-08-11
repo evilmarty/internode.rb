@@ -4,9 +4,9 @@ require "thor"
 
 module Internode
   class CLI < Thor
-    class_option :user, aliases: :u
-    class_option :password, aliases: :p
-    class_option :human, aliases: :h, type: :boolean
+    class_option :username, aliases: %w(--user -u)
+    class_option :password, aliases: %w(--pass -p)
+    class_option :human, aliases: %w(-h), type: :boolean
 
     desc "list", "List services"
     def list
@@ -29,7 +29,7 @@ module Internode
     end
 
     def account
-      Account.new(username: options[:user], password: options[:password])
+      Account.new(options)
     end
 
     def print_error(error)
