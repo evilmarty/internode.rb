@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    internode (1.0.0)
+    internode (1.0.1)
       httpclient
       oga
       table_print
